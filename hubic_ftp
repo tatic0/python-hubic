@@ -146,6 +146,7 @@ class auth_hubic:
 
         r = requests.get(self.hubicws + 'rest.dispatcher/' + 'getHubics',
                          params=payload)
+        print(r)
         hubics = r.json()
         self.hubicsId = hubics['answer'][0]['id']
 
@@ -195,5 +196,5 @@ FTPlike(conn).cmdloop()
 hubic.logout()
 
 
-#print 'OS_STORAGE_URL="'+Storage_Url+'"'
-#print 'OS_AUTH_TOKEN='+Auth_Token
+print 'OS_STORAGE_URL="'+Storage_Url+'"'
+print 'OS_AUTH_TOKEN='+Auth_Token
